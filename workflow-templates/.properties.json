@@ -1,0 +1,8 @@
+{
+	"name": "CI Workflow",
+	"description": "This workflow is for continuous integration.",
+	"iconName": "actions",
+	"categories": ["Continuous integration"],
+	"required_secrets": ["NPM_TOKEN", "CODECOV_TOKEN"],
+	"creator": "Your Organization"
+}
