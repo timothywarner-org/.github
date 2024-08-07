@@ -1,0 +1,44 @@
+name: Hello World Shared Workflow
+
+on:
+  workflow_call:
+    inputs:
+      org:
+        required: true
+        type: string
+      template:
+        required: true
+        type: string
+
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Use a template
+      - name: Use template
+        uses: timothywarner/github-reusable-workflow-action@v1.1
+        with:
+          org: ${{ inputs.org }}
+          workflow_template: ${{ inputs.template }}
+
+      # Display fun icons and success message
+      - name: Success Celebration
+        run: |
+          echo "✨🌟🎉 Congratulations! Your workflow ran successfully! 🎉🌟✨"
+          echo "::set-output name=success::true" # Setting output for a badge
+
+      # Set a workflow run badge (visible in the UI)
+      - name: Set Success Badge
+        if: steps.success_celebration.outputs.success == 'true'
+        uses: schneegans/dynamic-badges-action@v1
+        with:
+          auth: ${{ secrets.GITHUB_TOKEN }}
+          badge: ${{ github.run_id }}.svg
+          label: Workflow Status
+          message: Success
+          color: green
