@@ -1,10 +1,3 @@
-Here’s a handcrafted `README.md` template for your GitHub organization root. It reflects your public teaching brand, your instructional focus, and your direct tone — while doubling as a **model learning reference**. It’s clean, structured, and extensible.
-
----
-
-### ✅ Markdown Code: Paste Directly Into Your Org’s Root `README.md`
-
-````markdown
 # 🧠 TechTrainerTim Learning Repos
 
 Welcome to the official GitHub organization of [Tim Warner](https://TechTrainerTim.com) — Microsoft MVP, Pluralsight author, LinkedIn Learning instructor, and creator of enterprise-grade technical education. Every repository in this org is built for one purpose: to help you **learn fast, go deep, and apply with confidence**.
@@ -80,7 +73,3 @@ Then follow the `README.md` inside the repo to explore, run, and learn.
 Built with ❤️, precision, and pragmatism.  
 Because training should **never waste your time**.
 ````
-
----
-
-Let me know if you want it adapted for public learners vs enterprise learners, or styled with emojis off.
